@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SharkBait — Swim or Get Eaten</title>
+  <meta name="description" content="$SharkBait: Swim with the sharks. A Pump.fun-ready community coin." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg1: #061b2d;
+      --bg2: #0b2e4d;
+      --aqua: #3dd6ff;
+      --teal: #00b6c9;
+      --white: #ffffff;
+      --glass: rgba(255,255,255,0.08);
+      --stroke: rgba(255,255,255,0.12);
+      --accent: #7ff3ff;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin:0; padding:0; background: radial-gradient(1200px 600px at 20% -10%, #113a63 0%, var(--bg1) 40%), linear-gradient(180deg, var(--bg2), var(--bg1)); color: var(--white); font-family: 'Outfit', system-ui, sans-serif; }
+    a { color: var(--aqua); text-decoration: none; }
+    .container { max-width: 1150px; margin: 0 auto; padding: 24px; }
+    header { position: sticky; top:0; backdrop-filter: blur(8px); background: rgba(6,27,45,0.55); border-bottom:1px solid var(--stroke); z-index: 20; }
+    header .row { display:flex; align-items:center; gap:16px; }
+    .logo { display:flex; align-items:center; gap:14px; }
+    .logo img { width:48px; height:48px; border-radius: 50%; border: 2px solid var(--accent); box-shadow: 0 0 18px rgba(61,214,255,0.25); }
+    .logo h1 { font-size: 22px; margin:0; letter-spacing: 0.5px; }
+    nav { margin-left:auto; display:flex; gap:18px; }
+    nav a { opacity: .9; font-weight:600; }
+    .btn { display:inline-block; padding:12px 18px; border-radius: 14px; border:1px solid var(--stroke); background: linear-gradient(180deg, rgba(61,214,255,.18), rgba(61,214,255,.06)); color:var(--white); font-weight:700; letter-spacing:.2px; transition: transform .08s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn.primary { background: linear-gradient(180deg, var(--aqua), var(--teal)); color:#04222b; border: none; }
+    .hero .wrap { display:grid; grid-template-columns: 1.1fr 1fr; gap: 28px; align-items: center; padding: 56px 0; }
+    .tag { display:inline-flex; gap:10px; align-items:center; padding:6px 12px; border-radius: 999px; background: var(--glass); border:1px solid var(--stroke); font-weight:600; }
+    h2.big { font-size: clamp(36px, 5vw, 58px); line-height: 1.02; margin: 14px 0 10px; }
+    p.lead { font-size: 18px; opacity: .9; margin-bottom: 18px; }
+    .cta { display:flex; gap: 12px; flex-wrap: wrap; margin-top: 10px; }
+    .cardgrid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 24px; }
+    .card { background: var(--glass); border:1px solid var(--stroke); border-radius: 20px; padding: 18px; }
+    .card h3 { margin:0 0 6px; font-size: 18px; }
+    .panel { display:grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 36px; }
+    .glass { background: var(--glass); border:1px solid var(--stroke); border-radius: 22px; padding: 22px; }
+    .hero-art { width: 100%; height: auto; border-radius: 22px; border:1px solid var(--stroke); }
+    .ticker { display:flex; gap:12px; flex-wrap: wrap; }
+    .chip { padding: 8px 12px; border-radius: 999px; background: rgba(61,214,255,.12); border:1px dashed rgba(125,244,255,.35); font-weight:600; }
+    section { padding: 26px 0 12px; }
+    footer { margin-top: 40px; border-top:1px solid var(--stroke); padding: 22px 0 44px; opacity:.85; }
+    @media (max-width: 900px) {
+      .hero .wrap { grid-template-columns: 1fr; padding: 38px 0; }
+      .panel { grid-template-columns: 1fr; }
+      .cardgrid { grid-template-columns: 1fr; }
+      nav { display:none; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container row">
+      <div class="row logo">
+        <img src="assets/sharkbait.png" alt="$SharkBait Logo" />
+        <h1>SharkBait</h1>
+      </div>
+      <nav>
+        <a href="#story">Story</a>
+        <a href="#how">How to Buy</a>
+        <a href="#tokenomics">Tokenomics</a>
+        <a href="https://x.com/SharkBait427363" target="_blank">X Page</a>
+
+      </nav>
+      <a class="btn primary" href="#" id="launchBtn">Launch on Pump.fun coming soon...</a>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="container wrap">
+      <div>
+        <span class="tag">🦈 Swim or Get Eaten</span>
+        <h2 class="big">The community coin that hunts <em>bag-sized</em> dips.</h2>
+        <p class="lead">SharkBait is a Pump.fun-native social game: small wallets are “bait,” big buyers are “sharks,” and everyone’s trying to avoid getting eaten.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://x.com/SharkBait427363" id="buyBtn">Buy on Pump.fun soon</a>
+          <a class="btn" href="#tokenomics">View Tokenomics</a>
+          <a class="btn" href="#how">How It Works</a>
+        </div>
+        <div class="ticker" style="margin-top:14px">
+          <span class="chip">Ticker: TBD</span>
+          <span class="chip">Chain: Solana</span>
+          <span class="chip">CA: TBD</span>
+        </div>
+      </div>
+      <div>
+        <img class="hero-art" src="assets/sharkbait-artwork.png" alt="SharkBait Artwork" />
+      </div>
+    </div>
+  </main>
+
+
+<!-- STORY / OUR VIBE -->
+<section id="story">
+    <div class="container glass">
+      <h2>Story / Our Vibe</h2>
+      <p>
+        $SharkBait isn’t just another meme coin — it’s a social game on the blockchain. 
+        Small wallets are “bait,” big buyers are “sharks,” and the fun is watching the chase. 
+        Whether you’re here to swim with the big fish or just splash around, the ocean is open.
+      </p>
+    </div>
+  </section>
+  
+  <!-- HOW TO BUY -->
+  <section id="how" style="margin-top:24px">
+    <div class="container glass">
+      <h2>How to Buy</h2>
+      <ol>
+        <li>Download a Solana wallet like <strong>Phantom</strong> or <strong>Solflare</strong>.</li>
+        <li>Fund it with SOL (buy on any exchange & send to your wallet).</li>
+        <li>Go to our official <a href="#" id="pumpLink">Pump.fun</a> page.</li>
+        <li>Connect your wallet and buy $SharkBait instantly.</li>
+        <li>That’s it — you’re swimming with the sharks!</li>
+      </ol>
+    </div>
+  </section>
+  
+  <!-- TOKENOMICS -->
+  <section id="tokenomics" style="margin-top:24px">
+    <div class="container glass">
+      <h2>Tokenomics</h2>
+      <p>
+        $SharkBait runs natively on Pump.fun. That means:
+      </p>
+      <ul>
+        <li>💧 <strong>Dynamic Supply:</strong> No fixed cap — tokens exist based on Pump.fun liquidity and trading.</li>
+        <li>⚡ <strong>0% Tax:</strong> Every trade is clean — no extra buy/sell fees.</li>
+        <li>🌊 <strong>All on Pump.fun:</strong> Trading happens entirely on Pump.fun’s bonding curve system.</li>
+      </ul>
+      <p>
+        This is pure community-driven chaos — no Raydium migration, no locked supply, and no whales controlling the flow.
+      </p>
+    </div>
+  </section>
+  
+  <script>
+    // Replace with your actual Pump.fun link
+    document.getElementById('pumpLink').href = "https://pump.fun/your-token-link";
+  </script>
+  
+  
+  
+
+
+    
+  </footer>
+  <footer>
+    <div class="container">
+      <small>© 2025 $SharkBait · Meme coin, not financial advice. Built for Pump.fun.</small>
+    </div>
+  <script>
+    const pumpLink = "#"; // Replace with your Pump.fun link
+    document.getElementById('launchBtn').href = pumpLink;
+    document.getElementById('buyBtn').href = pumpLink;
+  </script>
+</body>
+</html>
